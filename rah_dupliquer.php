@@ -61,6 +61,12 @@ EOF;
 		$js = <<<EOF
 			(function() {
 				$(document).ready(function() {
+
+					if ($('[name=publish]').length)
+					{
+						return;
+					}
+
 					var tipText = 'CTRL+D';
 
 					if (navigator.userAgent.indexOf('Mac OS X') !== -1)
@@ -94,7 +100,7 @@ EOF;
 				$(window).keydown(function(e) {
 					if (e.which === 68 || (String.fromCharCode(e.which).toLowerCase() === 'd' && (e.metaKey || e.ctrlKey)))
 					{
-						var obj = $('form .publish');
+						var obj = $('.rah_dupliquer_tip');
 						if (obj.length)
 						{
 							e.preventDefault();
