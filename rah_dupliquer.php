@@ -46,9 +46,7 @@ class rah_dupliquer
 			<style type="text/css">
 				.rah_dupliquer_tip
 				{
-					margin: 1em 0 0 0.5em;
-					display: none;
-					vertical-align: baseline;
+					visibility: hidden;
 				}
 			</style>
 EOF;
@@ -71,9 +69,25 @@ EOF;
 					}
 
 					$('form .publish').eq(0)
-						.after('<small class="rah_dupliquer_tip information">'+tipText+'</small>')
-						.hover(function() {
-							$(this).siblings('.rah_dupliquer_tip').fadeToggle();
+						.after(' <small class="rah_dupliquer_tip information">'+tipText+'</small> ')
+						.hover(
+							function() {
+								$(this).siblings('.rah_dupliquer_tip')
+									.css('opacity', 0)
+									.css('visibility', 'visible')
+									.fadeTo(600, 1);
+							},
+							function() {
+								$(this).siblings('.rah_dupliquer_tip')
+									.fadeTo(300, 0, function() {
+										$(this).css('visibility', 'hidden');
+									});
+							}
+						)
+						.click(function() {
+							$(this).siblings('.rah_dupliquer_tip')
+								.css('opacity', 0)
+								.css('visibility', 'hidden');
 						});
 				});
 
