@@ -104,7 +104,8 @@ EOF;
 							form.find('#title').val(form.find('#title').val());
 							form.append(
 								'<input type="hidden" name="publish" value="1" />'+
-								'<input type="hidden" name="publish_now" value="1" />'
+								'<input type="hidden" name="publish_now" value="1" />'+
+								'<input type="hidden" name="Status" value="1" />'
 							);
 							form.removeClass('async');
 							editor.replaceWith(form);
