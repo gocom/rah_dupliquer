@@ -98,7 +98,7 @@ EOF;
 				});
 
 				$(window).keydown(function(e) {
-					if (e.which === 68 || (String.fromCharCode(e.which).toLowerCase() === 'd' && (e.metaKey || e.ctrlKey)))
+					if (String.fromCharCode(e.which).toLowerCase() === 'd' && (e.metaKey || e.ctrlKey))
 					{
 						var obj = $('.rah_dupliquer_tip');
 						if (obj.length)
