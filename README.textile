@@ -4,6 +4,10 @@ p. "Twitter":http://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_du
 
 p. Duplicate "Textpattern CMS'":http://textpattern.com articles with two familiar keyboard shortcuts, Command+D and CTRL+D.
 
+h2. Requirements
+
+* Textpattern 4.6.0-dev "r4573":http://code.google.com/p/textpattern/source/detail?r=4573 or newer.
+
 h2. Toolshed notice
 
 p. This is a toolshed project. Experimental and not part of the main supported product line of Rah. Not yet at least. Please use at your own risk.
@@ -14,6 +18,7 @@ h3. Version 0.2 - upcoming
 
 * Ignore articles that haven't yet been saved.
 * Fix keyboard shortcut.
+* Uses the new async functionality add in "r4572":http://code.google.com/p/textpattern/source/detail?r=4572 and "r4573":http://code.google.com/p/textpattern/source/detail?r=4573.
 
 h3. Version 0.1 - 2012/11/04
 
