@@ -104,8 +104,7 @@ EOF;
 						if (obj.length)
 						{
 							e.preventDefault();
-							var editor = obj.eq(0).parents('form');
-							var form = editor.clone();
+							var form = obj.eq(0).parents('form');
 							form.find('[name=exp_year], [name=url_title]').val('');
 							form.find('#title').val(form.find('#title').val());
 							form.append(
@@ -113,9 +112,7 @@ EOF;
 								'<input type="hidden" name="publish_now" value="1" />'+
 								'<input type="hidden" name="Status" value="1" />'
 							);
-							form.removeClass('async');
-							editor.replaceWith(form);
-							form.submit();
+							form.off('submit.txpAsyncForm').submit();
 						}
 					}
 				});
