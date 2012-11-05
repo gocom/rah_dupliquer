@@ -106,7 +106,6 @@ EOF;
 							e.preventDefault();
 							var form = obj.eq(0).parents('form');
 							form.find('[name=exp_year], [name=url_title]').val('');
-							form.find('#title').val(form.find('#title').val());
 							form.append(
 								'<input type="hidden" name="publish" value="1" />'+
 								'<input type="hidden" name="publish_now" value="1" />'+
