@@ -13,6 +13,7 @@ h2. Changelog
 h3. Version 0.2 - upcoming
 
 * Ignore articles that haven't yet been saved.
+* Fix keyboard shortcut.
 
 h3. Version 0.1 - 2012/11/04
 
