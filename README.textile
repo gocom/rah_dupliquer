@@ -14,7 +14,7 @@ p. This is a toolshed project. Experimental and not part of the main supported p
 
 h2. Changelog
 
-h3. Version 0.2 - upcoming
+h3. Version 0.2 - 2012/11/06
 
 * Ignore articles that haven't yet been saved.
 * Fix keyboard shortcut.

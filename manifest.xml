@@ -3,7 +3,7 @@
 	<name>rah_dupliquer</name>
 	<description>CMD+D duplicates an article</description>
 
-	<version>0.1</version>
+	<version>0.2</version>
 	<type>3</type>
 
 	<author>Jukka Svahn</author>
