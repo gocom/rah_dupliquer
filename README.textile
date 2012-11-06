@@ -18,7 +18,7 @@ h3. Version 0.2 - 2012/11/06
 
 * Ignore articles that haven't yet been saved.
 * Fix keyboard shortcut.
-* Uses the new async functionality add in "r4572":http://code.google.com/p/textpattern/source/detail?r=4572 and "r4573":http://code.google.com/p/textpattern/source/detail?r=4573.
+* Uses the new async functionality added in "r4572":http://code.google.com/p/textpattern/source/detail?r=4572 and "r4573":http://code.google.com/p/textpattern/source/detail?r=4573.
 
 h3. Version 0.1 - 2012/11/04
 
