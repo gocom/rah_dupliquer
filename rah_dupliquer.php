@@ -60,8 +60,8 @@ EOF;
 	{
 		$js = <<<EOF
 			(function() {
-				$(document).ready(function() {
-
+				$(document).ready(function ()
+				{
 					if ($('[name=publish]').length)
 					{
 						return;
@@ -77,13 +77,15 @@ EOF;
 					$('form .publish').eq(0)
 						.after(' <small class="rah_dupliquer_tip information">'+tipText+'</small> ')
 						.hover(
-							function() {
+							function()
+							{
 								$(this).siblings('.rah_dupliquer_tip')
 									.css('opacity', 0)
 									.css('visibility', 'visible')
 									.fadeTo(600, 1);
 							},
-							function() {
+							function()
+							{
 								$(this).siblings('.rah_dupliquer_tip')
 									.fadeTo(300, 0, function() {
 										$(this).css('visibility', 'hidden');
@@ -97,7 +99,8 @@ EOF;
 						});
 				});
 
-				$(window).keydown(function(e) {
+				$(window).keydown(function (e)
+				{
 					if (String.fromCharCode(e.which).toLowerCase() === 'd' && (e.metaKey || e.ctrlKey))
 					{
 						var obj = $('.rah_dupliquer_tip');
