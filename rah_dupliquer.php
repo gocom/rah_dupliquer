@@ -56,7 +56,7 @@ EOF;
 	public function javascript()
 	{
 		$js = <<<EOF
-			textpattern.Route.add('article, css, page, form', function (data)
+			textpattern.Route.add('article, css, page, form', function ()
 			{
 				if (!$('#txp_clone').length && $('[name=publish]').length)
 				{
