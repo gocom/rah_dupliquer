@@ -29,11 +29,8 @@ class rah_dupliquer
 	{
 		global $event;
 
-		if ($event === 'article' || $event === 'page')
-		{
-			register_callback(array($this, 'styles'), 'admin_side', 'head_end');
-			register_callback(array($this, 'javascript'), 'admin_side', 'head_end');
-		}
+		register_callback(array($this, 'styles'), 'admin_side', 'head_end');
+		register_callback(array($this, 'javascript'), 'admin_side', 'head_end');
 	}
 
 	/**
@@ -59,9 +56,9 @@ EOF;
 	public function javascript()
 	{
 		$js = <<<EOF
-			textpattern.Route.add('article', function ()
+			textpattern.Route.add('article, css, page, form', function (data)
 			{
-				if ($('[name=publish]').length)
+				if (!$('#txp_clone').length && $('[name=publish]').length)
 				{
 					return;
 				}
@@ -102,9 +99,18 @@ EOF;
 					if (String.fromCharCode(e.which).toLowerCase() === 'd' && (e.metaKey || e.ctrlKey))
 					{
 						var obj = $('.rah_dupliquer_tip');
+
 						if (obj.length)
 						{
 							e.preventDefault();
+							var clone = $('#txp_clone');
+
+							if (clone.length)
+							{
+								clone.click();
+								return;
+							}
+
 							var form = obj.eq(0).parents('form');
 							form.find('[name=exp_year], [name=url_title]').val('');
 							form.append(
