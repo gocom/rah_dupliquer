@@ -43,7 +43,7 @@ class rah_dupliquer
 	public function styles()
 	{
 		echo <<<EOF
-			<style type="text/css">
+			<style>
 				.rah_dupliquer_tip
 				{
 					visibility: hidden;
