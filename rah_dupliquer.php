@@ -29,7 +29,7 @@ class rah_dupliquer
 	{
 		global $event;
 
-		if ($event === 'article')
+		if ($event === 'article' || $event === 'page')
 		{
 			register_callback(array($this, 'styles'), 'admin_side', 'head_end');
 			register_callback(array($this, 'javascript'), 'admin_side', 'head_end');
@@ -59,45 +59,43 @@ EOF;
 	public function javascript()
 	{
 		$js = <<<EOF
-			(function() {
-				$(document).ready(function ()
+			textpattern.Route.add('article', function ()
+			{
+				if ($('[name=publish]').length)
 				{
-					if ($('[name=publish]').length)
-					{
-						return;
-					}
+					return;
+				}
 
-					var tipText = 'CTRL+D';
+				var tipText = 'CTRL+D';
 
-					if (navigator.userAgent.indexOf('Mac OS X') !== -1)
-					{
-						tipText = '&#8984;+D';
-					}
+				if (navigator.userAgent.indexOf('Mac OS X') !== -1)
+				{
+					tipText = '&#8984;+D';
+				}
 
-					$('form .publish').eq(0)
-						.after(' <small class="rah_dupliquer_tip information">'+tipText+'</small> ')
-						.hover(
-							function()
-							{
-								$(this).siblings('.rah_dupliquer_tip')
-									.css('opacity', 0)
-									.css('visibility', 'visible')
-									.fadeTo(600, 1);
-							},
-							function()
-							{
-								$(this).siblings('.rah_dupliquer_tip')
-									.fadeTo(300, 0, function() {
-										$(this).css('visibility', 'hidden');
-									});
-							}
-						)
-						.click(function() {
+				$('form .publish').eq(0)
+					.after(' <small class="rah_dupliquer_tip information">'+tipText+'</small> ')
+					.hover(
+						function()
+						{
 							$(this).siblings('.rah_dupliquer_tip')
 								.css('opacity', 0)
-								.css('visibility', 'hidden');
-						});
-				});
+								.css('visibility', 'visible')
+								.fadeTo(600, 1);
+						},
+						function()
+						{
+							$(this).siblings('.rah_dupliquer_tip')
+								.fadeTo(300, 0, function() {
+									$(this).css('visibility', 'hidden');
+								});
+						}
+					)
+					.click(function() {
+						$(this).siblings('.rah_dupliquer_tip')
+							.css('opacity', 0)
+							.css('visibility', 'hidden');
+					});
 
 				$(window).keydown(function (e)
 				{
@@ -118,7 +116,7 @@ EOF;
 						}
 					}
 				});
-			})();
+			});
 EOF;
 
 		echo script_js($js);
