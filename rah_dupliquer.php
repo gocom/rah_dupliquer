@@ -27,8 +27,6 @@ class rah_dupliquer
 
 	public function __construct()
 	{
-		global $event;
-
 		register_callback(array($this, 'styles'), 'admin_side', 'head_end');
 		register_callback(array($this, 'javascript'), 'admin_side', 'head_end');
 	}
