@@ -1,8 +1,14 @@
 h1. rah_dupliquer
 
-p. "Twitter":http://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_dupliquer | "Donate":http://rahforum.biz/donate/rah_dupliquer
+"Packagist": | "Twitter":http://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_dupliquer | "Donate":http://rahforum.biz/donate/rah_dupliquer
 
-p. Duplicate "Textpattern CMS'":http://textpattern.com articles with two familiar keyboard shortcuts, Command+D and CTRL+D.
+Duplicate "Textpattern CMS'":http://textpattern.com articles with two familiar keyboard shortcuts, Command+D and CTRL+D.
+
+h2. Install
+
+Using "Composer":http://getcomposer.org:
+
+bc. $ composer require rah/rah_dupliquer
 
 h2. Requirements
 
@@ -10,7 +16,7 @@ h2. Requirements
 
 h2. Toolshed notice
 
-p. This is a toolshed project. Experimental and not part of the main supported product line of Rah. Not yet at least. Please use at your own risk.
+This is a toolshed project. Experimental and not part of the main supported product line of Rah. Not yet at least. Please use at your own risk.
 
 h2. Changelog
 
