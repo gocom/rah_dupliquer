@@ -13,13 +13,11 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-    new rah_dupliquer();
-
 /**
  * The plugin class.
  */
 
-class rah_dupliquer
+class Rah_Dupliquer
 {
     /**
      * Constructor.
@@ -127,4 +125,4 @@ EOF;
     }
 }
 
-?>
+new Rah_Dupliquer();
