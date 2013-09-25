@@ -1,0 +1,11 @@
+{
+    "name": "rah_dupliquer",
+    "description": "CMD+D duplicates an article",
+    "version": "0.2.0",
+    "type": 3,
+    "author": "Jukka Svahn",
+    "author_uri": "http://rahforum.biz",
+    "order": 5,
+    "flags": 0,
+    "help": {"file" : ["./README.textile"]}
+}
