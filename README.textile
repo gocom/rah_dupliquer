@@ -1,6 +1,6 @@
 h1. rah_dupliquer
 
-"Packagist":https://packagist.org/packages/rah/rah_dupliquer | "Twitter":http://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_dupliquer | "Donate":http://rahforum.biz/donate/rah_dupliquer
+"Packagist":https://packagist.org/packages/rah/rah_dupliquer | "Twitter":https://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_dupliquer | "Donate":http://rahforum.biz/donate/rah_dupliquer
 
 Duplicate "Textpattern CMS'":http://textpattern.com articles with two familiar keyboard shortcuts, Command+D and CTRL+D.
 
