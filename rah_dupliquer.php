@@ -70,29 +70,29 @@ EOF;
 
                 $('form .publish').eq(0)
                     .after(' <small class="rah_dupliquer_tip information">'+tipText+'</small> ')
-                    .hover(
-                        function()
-                        {
-                            $(this).siblings('.rah_dupliquer_tip')
-                                .css('opacity', 0)
-                                .css('visibility', 'visible')
-                                .fadeTo(600, 1);
-                        },
-                        function()
-                        {
-                            $(this).siblings('.rah_dupliquer_tip')
-                                .fadeTo(300, 0, function() {
-                                    $(this).css('visibility', 'hidden');
-                                });
-                        }
-                    )
-                    .click(function() {
+                    .on('mouseenter', function ()
+                    {
+                        $(this).siblings('.rah_dupliquer_tip')
+                            .css('opacity', 0)
+                            .css('visibility', 'visible')
+                            .fadeTo(600, 1);
+                    })
+                    .on('mouseleave', function ()
+                    {
+                        $(this).siblings('.rah_dupliquer_tip')
+                            .fadeTo(300, 0, function ()
+                            {
+                                $(this).css('visibility', 'hidden');
+                            });
+                    })
+                    .on('click', function ()
+                    {
                         $(this).siblings('.rah_dupliquer_tip')
                             .css('opacity', 0)
                             .css('visibility', 'hidden');
                     });
 
-                $(window).keydown(function (e)
+                $(window).on('keydown', function (e)
                 {
                     if (String.fromCharCode(e.which).toLowerCase() === 'd' && (e.metaKey || e.ctrlKey))
                     {
@@ -116,7 +116,7 @@ EOF;
                                 '<input type="hidden" name="publish_now" value="1" />'+
                                 '<input type="hidden" name="Status" value="1" />'
                             );
-                            form.off('submit.txpAsyncForm').submit();
+                            form.off('submit.txpAsyncForm').trigger('submit');
                         }
                     }
                 });
